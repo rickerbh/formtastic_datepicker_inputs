@@ -8,11 +8,11 @@ Gem::Specification.new do |s|
   s.description = %q{Use jQuery UI's date picker with formtastic easily}
   s.email = %q{alan@appfission.com}
   s.extra_rdoc_files = [
-    "README"
+    "README.markdown"
   ]
   s.files = Dir.glob("lib/**/*.rb") + [
     "MIT-LICENSE",
-    "README",
+    "README.markdown",
     "Rakefile",
     "init.rb"
   ]
@@ -23,20 +23,15 @@ Gem::Specification.new do |s|
   s.summary = %q{Use jQuery UI's date picker with formtastic easily}
   s.test_files = Dir.glob("spec/**/*.rb")
 
-  s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-  s.add_dependency(%q<activesupport>, [">= 2.3.7"])
-  s.add_dependency(%q<actionpack>, [">= 2.3.7"])
+  s.add_dependency(%q<activesupport>, [">= 3.1.4"])
+  s.add_dependency(%q<actionpack>, [">= 3.1.4"])
   s.add_dependency(%q<i18n>, [">= 0.4.0"])
+  s.add_dependency(%q<formtastic>, [">= 2.0.0"])
   
-  if ENV['RAILS_2']
-    s.add_development_dependency(%q<rails>, ["~> 2.3.8"])
-  else
-    s.add_development_dependency(%q<rails>, [">= 3.0.0"])
-  end
-  s.add_development_dependency(%q<rspec-rails>, ["~> 2.0.0"])
+  s.add_development_dependency(%q<rails>, [">= 3.1.4"])
+  s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+  s.add_development_dependency(%q<rspec-rails>, [">= 2.9.0"])
   s.add_development_dependency(%q<rspec_tag_matchers>, [">= 1.0.0"])
-  s.add_development_dependency(%q<hpricot>, ["~> 0.8.3"])
-
-  s.add_dependency(%q<formtastic>)
+  s.add_development_dependency(%q<hpricot>, [">= 0.8.3"])
 end
 
